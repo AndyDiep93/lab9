@@ -29,7 +29,7 @@ public class ForgotPasswordServlet extends HttpServlet {
             throws ServletException, IOException {
         getServletContext().getRequestDispatcher("/WEB-INF/forgot.jsp").forward(request, response);
     }
-    
+
     /**
      * Handles the HTTP <code>POST</code> method.
      *
@@ -41,13 +41,11 @@ public class ForgotPasswordServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
 
         String email = request.getParameter("email");
         String path = getServletContext().getRealPath("/WEB-INF");
 
-        
-       AccountService.forgotPassword(email, path);
+        AccountService.forgotPassword(email, path);
 
         String message = "If the address you entered is valid, you will receive an email very soon. Please check your email for your password.";
 

@@ -14,13 +14,13 @@
     <body>
         <h1>Forgot Password</h1>
         <p>Please enter in your email address to retrieve your password.</p>
-        
+
         <form action="forgot" method="post">
             Email: <input type="text" name="email"><br>
             <br>
             <input type="submit" value="Submit">
         </form>
         <p>${message}</p>
-      
+
     </body>
 </html>
